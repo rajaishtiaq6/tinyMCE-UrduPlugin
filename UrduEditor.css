@@ -1,0 +1,108 @@
+.keyboardHeader {
+    background: none repeat scroll 0 0 #415888;
+    border: 1px outset #000000;
+    color: #FFFFFF;
+    cursor: move;
+    margin: 0 0 5px;
+    padding: 2px;
+    text-align: center;
+}
+.keyboardContainer {
+    background: none repeat scroll 0 0 #F7F7F7;
+    border: 1px solid;
+    direction: ltr;
+    padding: 5px;
+    z-index: 100;
+}
+.keyboardContainerDragged {
+    background: none repeat scroll 0 0 #F7F7F7;
+    direction: ltr;
+    opacity: 0.4;
+    padding: 5px;
+    z-index: 100;
+}
+.keyboardPanel {
+    background: none repeat scroll 0 0 #EFEFEF;
+    border: 1px solid;
+    color: #000000;
+    direction: ltr;
+    padding: 4px;
+}
+
+.btnHelp 
+{	
+	background: #ECECEC;
+	border: 1px solid #888888;
+	cursor: pointer;
+	cursor: hand;
+	text-align:center;
+	font-family:Urdu Naskh Asiatype, Tahoma;
+	font-size:14px;
+}
+
+.btnFlat 
+{	
+	background: #ECECEC;
+	border: 1px solid #888888;
+	cursor: pointer;
+	cursor: hand;
+	text-align:center;
+	font-family: Urdu Naskh Asiatype, Tahoma;
+	font-size:14px;
+}
+
+.btnRaised, .btnFlat:hover {
+	background: #D3D3D3;
+	border: 1px outset;
+	cursor: pointer;
+	cursor: hand;
+	text-align:center;
+	font-family:Urdu Naskh Asiatype, Tahoma;
+	font-size:14px;
+	font-weight:bold;
+}
+.btnLowered, .btnFlat:active {
+	background: #D3D3D3;
+	border: 1px inset;
+	cursor: pointer;
+	cursor: hand;
+	text-align:center;
+	font-family: Urdu Naskh Asiatype, Tahoma;
+	font-size:14px;
+}
+
+.btnSysFlat 
+{	
+	background: #808080;
+	border: 1px solid #888888;
+	cursor: pointer;
+	cursor: hand;
+	text-align:center;
+	font-family:Urdu Naskh Asiatype, Tahoma;
+	font-size:14px;
+}
+
+.btnSysRaised, .btnSysFlat:hover {
+	background: #333333;
+	border: 1px outset;
+	cursor: pointer;
+	cursor: hand;
+	text-align:center;
+	font-family:Urdu Naskh Asiatype, Tahoma;
+	font-size:14px;
+	font-weight:bold;
+}
+.btnSysLowered, .btnSysFlat:active {
+	background: #333333;
+	border: 1px inset;
+	cursor: pointer;
+	cursor: hand;
+	text-align:center;	
+	font-family:Urdu Naskh Asiatype, Tahoma;
+	font-size:14px;
+}
+.hiddentext {display:none}
+.outline {cursor:hand; text-decoration:underline}
+img{display:none !important;}
+.btn {border:1px solid #ddd;padding:10px 10px; border-radius:4px;background: #0093ff;width: 100%;margin-top: 5px;cursor: pointer;}
+.btn:hover{background: #0578cc;}

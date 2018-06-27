@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>UrduEditor</title>
+	<script src="http://code.jquery.com/jquery-1.9.0.js"></script>
+	<script src="http://code.jquery.com/jquery-migrate-1.2.1.js"></script>
+	<link rel="stylesheet" type="text/css" href="UrduEditor.css" />    
+	<script src="jquery.UrduEditor.js" type="text/javascript"></script> 
+	<style>
+		@font-face {
+			font-family: "JameelNooriNastaleeq";
+			src: url("JameelNooriNastaleeq.woff");
+		}
+	body {
+		direction: rtl;
+		padding:10px;
+		font-family: 'JameelNooriNastaleeq', 'Noto Naskh Arabic', sans serif;
+	}
+		textarea{font-family: 'JameelNooriNastaleeq', 'Noto Naskh Arabic', sans serif !important;}
+	#content {
+		border: 1px solid #ccc;
+		vertical-align: middle;
+		direction: rtl;
+		padding: 2px;
+	}
+	</style>
+	<script>
+		$(document).ready(function() { 
+			$.fn.UrduEditor.defaults.PointSize = '25px';
+			$.fn.UrduEditor.defaults.EditorFont="Urdu Naskh Asiatype";
+			$.fn.UrduEditor.defaults.EnglishColor="#CCCCFF";
+			$.fn.UrduEditor.defaults.UrduColor="#99FF99";
+			$.fn.UrduEditor.defaults.ToggleControls=true;
+			$.fn.UrduEditor.defaults.VirtualKeyboard=false;
+			$.fn.UrduEditor.defaults.LineBreak=true;
+			
+			$("#content").UrduEditor("20px");   
+		});  
+		$(function() {
+            var args = top.tinymce.activeEditor.windowManager.getParams();
+            console.log(args.content, args.arg2);
+            var content = top.tinymce.activeEditor.getContent();
+            $("textarea#content").val(content);
+            console.log(content);
+		});
+       
+		function insert() {
+		    var html = $("#content").val();
+            top.tinymce.activeEditor.setContent(html, {format: 'raw'});
+            top.tinymce.execCommand('mceDirectionRTL');
+            top.tinymce.activeEditor.windowManager.close();
+        }
+	</script>
+  </head>
+  <body>
+	<form>
+		<textarea id='content' name="content" style="font-size: 25px;height: 510px;width: 100%;"></textarea>
+		<button class="btn" onclick="insert();">Insert</button>
+	</form>
+  </body>
+</html>
