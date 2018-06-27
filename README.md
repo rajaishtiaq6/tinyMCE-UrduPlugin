@@ -1,2 +1,2 @@
 # tinyMCE-UrduPlugin
-This is a tinymce plugin that support to insert urdu in tinymce editor 
+This plugin adds the ability for users to write urdu in tinymce editor. 
